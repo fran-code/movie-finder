@@ -19,6 +19,10 @@ body {
   padding-top: 50px;
 }
 
+.ml_5px {
+  margin-left: 5px;
+}
+
 .ml_15px {
   margin-left: 15px;
 }

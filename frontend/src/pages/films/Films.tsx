@@ -64,7 +64,7 @@ const CardSection: React.FC<ICardSection> = ({ head, body, split = false }) => {
 }
 
 const CardFilm: React.FC<ICardFilm> = ({ filmData }) => {
-    const [isFavorite, setIsFavorite] = React.useState(false)
+    const [isFavorite, setIsFavorite] = React.useState()
     const navigate = useNavigate()
 
     React.useEffect(() => {
@@ -110,7 +110,7 @@ const CardFilm: React.FC<ICardFilm> = ({ filmData }) => {
                                     <img src="/logo-rotten-tomatoes.svg" alt="logo-rotten-tomatoes" />
                                     <span className='ml_15px'>{filmData.Ratings.find(rat => rat.Source === "Internet Movie Database")?.Value}</span>
                                 </span>
-                                <button className='customButton' type='button' onClick={() => addFavorite(filmData.imdbID)}><i className={isFavorite ? "fa fa-heart" : "fa fa-heart-o"} aria-hidden="true" /> <span>{isFavorite ? "Delete from favourites" : "Add to favourites"}</span></button>
+                                {isFavorite !== undefined && <button className='customButton' name='rateButton' type='button' onClick={() => addFavorite(filmData.imdbID)}><i className={isFavorite ? "fa fa-heart" : "fa fa-heart-o"} aria-hidden="true" /><span className='ml_5px'>{isFavorite ? "Delete from favourites" : "Add to favourites"}</span></button>}
                             </div>
                         </div>
                     </div>

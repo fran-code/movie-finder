@@ -24,8 +24,8 @@ const CustomInput: React.FC<ICustomInput> = ({ value, setValue, label, onSubmit 
                 <span className="bar"></span>
                 <label htmlFor="customInput" className="customLabel">{label}</label>
             </div>
-            {value !== "" && <button className="deleteButton" onClick={() => onSubmit("")}><i className="fa fa-times" /></button>}
-            {value !== "" && <button className="searchButton" onClick={() => onSubmit(value)}><i className="fa fa-search" /></button>}
+            {value !== "" && <button className="deleteButton" data-testid="deleteButton" onClick={() => onSubmit("")}><i className="fa fa-times" /></button>}
+            {value !== "" && <button className="searchButton" data-testid="searchButton" onClick={() => onSubmit(value)}><i className="fa fa-search" /></button>}
         </div>
     )
 }

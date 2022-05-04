@@ -6,7 +6,6 @@ export const apiCall = async (
         data, headers: customHeaders, ...customConfig
     }: any = {}
 ) => {
-    console.log("URL:: ", `${env.urlApi}:${env.portApi}/${endpoint}`)
     return window.fetch(`${env.urlApi}:${env.portApi}/${endpoint}`, {
         method: data ? 'POST' : 'GET',
         body: data ? JSON.stringify(data) : undefined,
