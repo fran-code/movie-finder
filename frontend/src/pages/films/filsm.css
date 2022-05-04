@@ -1,0 +1,119 @@
+.filmContainer {
+    padding: 50px 10px;
+    background-color: aliceblue;
+}
+
+.posterImgCard {
+    height: 666px;
+    width: 450px;
+}
+
+.headCardSection {
+    font-weight: bold;
+    font-size: large;
+    color: gray;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.buttonsRateContainer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rateContainer {
+    background-color: coral;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    height: 23px;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.cardInfo {
+    flex-basis: 60%;
+}
+
+.customButton {
+    cursor: pointer;
+    background-color: #08b2c6;
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+}
+
+.customButton:hover {
+    background-color: #5fd9e9;
+    color: black;
+}
+
+.square {
+    padding: 15px;
+    margin: auto;
+    margin-bottom: 5px;
+    background-color: white;
+    border: 0;
+    display: flex;
+    position: relative;
+    word-wrap: break-word;
+    background: #FFF;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    border-radius: 6px;
+    flex-direction: column;
+}
+
+.squareBody {
+    flex: 1 1 auto;
+    padding: 0.9375rem 20px;
+    position: relative;
+    -webkit-box-flex: 1;
+}
+
+.squareTitle {
+    padding: 15px;
+    margin-top: -30px;
+    border-radius: 3px;
+    font-size: initial;
+    color: white;
+    background: linear-gradient(60deg, #26c6da, #00acc1);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(156, 39, 176, .4);
+}
+
+@media (max-width: 1070px) {
+    .filmContainer {
+        padding: 50px 10px;
+    }
+
+    .cardInfo {
+        flex-basis: 100%;
+    }
+
+    .buttonsRateContainer {
+        display: grid;
+        gap: 15px;
+    }
+
+    .posterImgCard {
+        max-width:100%;
+        max-height:100%;
+    }
+
+    .cardContainer {
+        margin-top: 40px;
+    }
+}
