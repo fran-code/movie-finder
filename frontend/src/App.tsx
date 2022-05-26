@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { constants } from './utils/constants'
 import FullPageSpinner from './components/FullPageSpinner'
 
 const Films = React.lazy(() => import(/* webpackPrefetch: true */ './pages/films/Films'))

@@ -1,33 +1,15 @@
 import React from 'react'
-import { apiCall } from '../../utils/helpers'
+import { apiCall, submitReducer } from '../../utils/helpers'
 import { constants } from '../../utils/constants'
 import { IDataFilm, IStateSubmit, ICardFilm, ICardSection } from '../../utils/interfaces'
 import FullPageSpinner from '../../components/FullPageSpinner'
 import { useNavigate } from 'react-router-dom'
-import './filsm.css'
-
-const submitReducer = (state: IStateSubmit, action: { type: 'loading' | 'success' | 'error' }) => {
-    switch (action.type) {
-        case 'loading': {
-            return { loading: true, message: null }
-        }
-        case 'success': {
-            return { loading: false, message: null }
-        }
-        case 'error': {
-            return { loading: false, message: "Film not found!" }
-        }
-        default: {
-            throw new Error(`Unhandled action type: ${action}`)
-        }
-    }
-}
+import './films.css'
 
 const initialState: IStateSubmit = {
     loading: false,
     message: null
 }
-
 
 const useSubmit = () => {
     const [filmData, setFilmData] = React.useState<IDataFilm>()
